@@ -664,7 +664,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await dizaynlar1(update, context)
 
 
-app = ApplicationBuilder().token("1256369100:AAGNwTVqyx-fSz0PcFSugnLr9f3UfYBkNvU").build()
+app = ApplicationBuilder().token("1952748542:AAH3EVIa0wGZg1tcuw3w_qs8aCFjH6r14gA").build()
 app.add_handler(CallbackQueryHandler(button))
 app.add_handler(CommandHandler("start", salom))
 app.add_handler(CommandHandler("restart", salom))
