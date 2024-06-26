@@ -621,7 +621,9 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     except Exception as err:
         await update.message.reply_text('Text hato yozilgan /yordam ni bosing va qo`llanmani korib chiqing')
 async def yordam(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("hurmatli foydalanuvchi bu botdan foydalanishda e`tiborli bo`ling yuborilgan videoni to`liq ko`ring")
+    video = open('yordam.mp4', 'rb')
+    yozuv = "Iltimos videoni to`liq ko`ring"
+    await update.message.reply_video(video=video, caption=yozuv)
 async def rek(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     with open('obuna.txt', 'r') as f:
         text = f.read()
