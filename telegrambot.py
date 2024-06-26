@@ -631,9 +631,9 @@ async def rek(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         sel = set(tes)
     for sat in (sel):
         son = int(sat)
-    with open('rek/rek.txt', 'r') as q:
+    with open('rek.txt', 'r') as q:
         rasmtext = q.read()
-    with open('rek/post1.jpg', 'rb') as photo:
+    with open('post1.jpg', 'rb') as photo:
         await context.bot.send_photo(son, photo=photo, caption=rasmtext)
 
 async def dizaynlar1(update: Update, context: ContextTypes.DEFAULT_TYPE):
