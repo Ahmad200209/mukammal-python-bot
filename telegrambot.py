@@ -32,7 +32,6 @@ async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     else:
        await update.message.reply_text('Assalomu alaykum Bizninng taklifnoma yozuvchi botimizga xush kelibsiz Iltimos quyidagi kanalga obuna bo\'ling https://t.me/Qadr_dizayn')
 async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    try:
         salom = update.message.text
         ozg  = re.search(r'<(.*?)>', salom).group(1)
             
@@ -111,7 +110,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -180,10 +179,10 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
             rasm = Image.open("Dizaynlar/3.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 100)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((580, 300), text, fill="#BEAB6E", font=font)
@@ -227,7 +226,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -236,12 +235,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/4.jpg")
+            rasm = Image.open("Dizaynlar/4.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 100)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((620, 250), text, fill="#DADBDC", font=font)
@@ -285,7 +284,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -294,12 +293,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/5.jpg")
+            rasm = Image.open("Dizaynlar/5.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 70 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 90)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 60 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 70 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 90)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
 
             # Birinchi matn
             chiz.text((320, 200), text, fill="#E6D783", font=font)
@@ -343,7 +342,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -352,12 +351,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/6.jpg")
+            rasm = Image.open("Dizaynlar/6.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  110 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 110)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  110 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 110)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((280, 140), text, fill="#D7C49A", font=font)
@@ -401,7 +400,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -410,12 +409,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/7.jpg")
+            rasm = Image.open("Dizaynlar/7.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 100)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((580, 100), text, fill="#D7C49A", font=font)
@@ -459,7 +458,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -468,12 +467,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/8.jpg")
+            rasm = Image.open("Dizaynlar/8.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 100)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((880, 120), text, fill="#36466F", font=font)
@@ -517,7 +516,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -526,12 +525,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/9.jpg")
+            rasm = Image.open("Dizaynlar/9.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 100)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((440, 250), text, fill="#99866D", font=font)
@@ -575,7 +574,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             # Qatorlarga bo'lish algoritmi
             for word in words:
                 test_line = current_line + word + " "
-                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype(" fonts/ariston_normal.ttf", 40))[2:]
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
                 if width <= max_width:
                     current_line = test_line
                 else:
@@ -584,12 +583,12 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             qatorlar.append(current_line)
 
 
-            rasm = Image.open(" Dizaynlar/10.jpg")
+            rasm = Image.open("Dizaynlar/10.jpg")
             chiz = ImageDraw.Draw(rasm)
-            font = ImageFont.truetype(" fonts/ariston_normal.ttf",  90 )
-            font1 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype(" fonts/ariston_normal.ttf", 100)
-            font3 = ImageFont.truetype(" fonts/ariston_normal.ttf", 80 )
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
             chiz.text((800, 240), text, fill="#EDF2F8", font=font)
@@ -615,11 +614,8 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
-
         else :
             await update.message.reply_text('Iltimos  botdan foydalanishdan oldin qo`llanmani ko`rib chiqing!!! /yordam ni bosing.  ')
-    except Exception as err:
-        await update.message.reply_text('Text hato yozilgan /yordam ni bosing va qo`llanmani korib chiqing')
 async def yordam(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     video = open('yordam.mp4', 'rb')
     yozuv = "Iltimos videoni to`liq ko`ring"
@@ -636,7 +632,7 @@ async def rek(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     with open('post1.jpg', 'rb') as photo:
         await context.bot.send_photo(son, photo=photo, caption=rasmtext)
 
-async def dizaynlar1(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def Dizaynlar1(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_message.chat_id
     for i, photo_path in enumerate(photo_paths):
         # Inline keyboard yaratish (1 ta tugma har bir rasm uchun)
@@ -663,7 +659,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(chat_id=query.message.chat_id,
                                       text=f"__________<Dizayn-{button_number}>__________ \nHurmatlidan keyin chiqadigan ism<Davronbek>\nTo`y bo`ladigan sana<19-dekabr>\nKelin va kuyov ismi<Baxtiyor va Odina>\nManzil<Kosonsoy shahri>")
     elif query.data =='boshlash':
-        await dizaynlar1(update, context)
+        await Dizaynlar1(update, context)
 
 
 app = ApplicationBuilder().token("1952748542:AAH3EVIa0wGZg1tcuw3w_qs8aCFjH6r14gA").build()
