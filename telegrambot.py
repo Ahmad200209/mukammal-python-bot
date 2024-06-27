@@ -32,6 +32,7 @@ async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     else:
        await update.message.reply_text('Assalomu alaykum Bizninng taklifnoma yozuvchi botimizga xush kelibsiz Iltimos quyidagi kanalga obuna bo\'ling https://t.me/Qadr_dizayn')
 async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    try:
         salom = update.message.text
         ozg  = re.search(r'<(.*?)>', salom).group(1)
             
@@ -616,6 +617,8 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
         else :
             await update.message.reply_text('Iltimos  botdan foydalanishdan oldin qo`llanmani ko`rib chiqing!!! /yordam ni bosing.  ')
+    except Exception as err:
+        await update.message.reply_text('Text hato yozilgan /yordam ni bosing va qo`llanmani korib chiqing')
 async def yordam(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     video = open('yordam.mp4', 'rb')
     yozuv = "Iltimos videoni to`liq ko`ring"
