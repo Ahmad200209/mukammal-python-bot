@@ -660,7 +660,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
 
             # Birinchi matn
-            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+            chiz.text((800, 240), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 420
@@ -670,16 +670,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex) // 2
-            chiz.text((xtext, 940), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 940), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((500, 1200), text3, fill="#EDF2F8", font=font3)
+            chiz.text((500, 1200), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
         
@@ -718,7 +718,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
 
             # Birinchi matn
-            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+            chiz.text((800, 240), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 420
@@ -728,16 +728,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex) // 2
-            chiz.text((xtext, 940), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 940), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((600, 1200), text3, fill="#EDF2F8", font=font3)
+            chiz.text((600, 1200), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -775,7 +775,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
 
             # Birinchi matn
-            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+            chiz.text((800, 240), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 520
@@ -785,16 +785,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex) // 2
-            chiz.text((xtext, 980), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 980), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((600, 1200), text3, fill="#EDF2F8", font=font3)
+            chiz.text((600, 1200), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -834,7 +834,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+            chiz.text((800, 240), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 420
@@ -844,16 +844,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width - 200) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex -200) // 2
-            chiz.text((xtext, 940), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 940), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((600, 1200), text3, fill="#EDF2F8", font=font3)
+            chiz.text((600, 1200), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -893,7 +893,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((800, 60), text, fill="#EDF2F8", font=font)
+            chiz.text((800, 60), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 240
@@ -903,16 +903,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width - 200) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex -200) // 2
-            chiz.text((xtext, 750), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 750), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((300, 1000), text3, fill="#EDF2F8", font=font3)
+            chiz.text((300, 1000), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -952,7 +952,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((750, 260), text, fill="#EDF2F8", font=font)
+            chiz.text((750, 260), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 440
@@ -962,16 +962,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width - 200) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex -200) // 2
-            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 950), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((300, 1200), text3, fill="#EDF2F8", font=font3)
+            chiz.text((300, 1200), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -1011,7 +1011,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((750, 260), text, fill="#EDF2F8", font=font)
+            chiz.text((750, 260), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 440
@@ -1021,16 +1021,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex) // 2
-            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 950), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((300, 1300), text3, fill="#EDF2F8", font=font3)
+            chiz.text((300, 1300), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -1070,7 +1070,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((750, 260), text, fill="#EDF2F8", font=font)
+            chiz.text((750, 260), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 440
@@ -1080,16 +1080,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width - 540) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex - 540) // 2
-            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 950), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((300, 1300), text3, fill="#EDF2F8", font=font3)
+            chiz.text((300, 1300), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -1129,7 +1129,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((500, 360), text, fill="#EDF2F8", font=font)
+            chiz.text((500, 360), text, fill="#EE2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 540
@@ -1139,16 +1139,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width - 540) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex - 540) // 2
-            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 950), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((100, 1300), text3, fill="#EDF2F8", font=font3)
+            chiz.text((100, 1300), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
@@ -1188,7 +1188,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((600, 60), text, fill="#EDF2F8", font=font)
+            chiz.text((600, 60), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 340
@@ -1198,16 +1198,16 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 line = line.strip()
                 text_width = chiz.textbbox((0, 0), line, font=font1)[2]
                 x_text = (eni_rasm - text_width) // 2
-                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                chiz.text((x_text, ytext), line, fill="#E2B448", font=font1)
                 ytext += 100
 
             # Ikkinchi matn
             tex = chiz.textbbox((0, 0), text2, font=font2)[2]
             xtext = (eni_rasm - tex - 300) // 2
-            chiz.text((xtext, 800), text2, fill="#EDF2F8", font=font2)
+            chiz.text((xtext, 800), text2, fill="#E2B448", font=font2)
 
             # Uchinchi matn
-            chiz.text((300, 1000), text3, fill="#EDF2F8", font=font3)
+            chiz.text((300, 1000), text3, fill="#E2B448", font=font3)
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
