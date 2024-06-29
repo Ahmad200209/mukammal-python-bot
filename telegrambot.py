@@ -14,6 +14,16 @@ photo_paths = [
     'namunalar/8.jpg',
     'namunalar/9.jpg',
     'namunalar/10.jpg',
+    'namunalar/11.jpg',
+    'namunalar/12.jpg',
+    'namunalar/13.jpg',
+    'namunalar/14.jpg',
+    'namunalar/15.jpg',
+    'namunalar/16.jpg',
+    'namunalar/17.jpg',
+    'namunalar/18.jpg',
+    'namunalar/19.jpg',
+    'namunalar/20.jpg',
 ] 
 async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     userid = update.message.from_user.id
@@ -615,6 +625,593 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-11"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+                # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/11.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+
+            # Birinchi matn
+            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 420
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex) // 2
+            chiz.text((xtext, 940), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((500, 1200), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+        
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-12"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/12.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+            # Birinchi matn
+            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 420
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex) // 2
+            chiz.text((xtext, 940), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((600, 1200), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-13"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/13.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+            # Birinchi matn
+            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 520
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex) // 2
+            chiz.text((xtext, 980), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((600, 1200), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-14"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/14.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((800, 240), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 420
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width - 200) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex -200) // 2
+            chiz.text((xtext, 940), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((600, 1200), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-15"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/15.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((800, 60), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 240
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width - 200) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex -200) // 2
+            chiz.text((xtext, 750), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((300, 1000), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-16"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/16.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((750, 260), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 440
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width - 200) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex -200) // 2
+            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((300, 1200), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-17"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/17.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((750, 260), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 440
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex) // 2
+            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((300, 1300), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-18"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/18.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 70 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((750, 260), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 440
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width - 540) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex - 540) // 2
+            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((300, 1300), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-19"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/19.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 70 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((500, 360), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 540
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width - 540) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex - 540) // 2
+            chiz.text((xtext, 950), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((100, 1300), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Dizayn-20"):
+            hur = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            sana = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            man = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            text = "Assalomu alaykum"
+            text3 = f"Manzil: {man}"
+            text1 = f"Hurmatli {hur}, sizni {sana} kuni NIKOH to‘yimiz munosabati bilan yoziladigan dasturxonimizga tashrif buyurishingizni so‘raymiz. Kamoli ehtirom bilan!!"
+            # Matnni qatorlarga bo'lish
+            words = text1.split(' ')
+            max_width = 750  # Maksimal ruxsat etilgan kenglik (sizga moslab o'zgartiring)
+            qatorlar = []
+            current_line = ""
+
+            # Qatorlarga bo'lish algoritmi
+            for word in words:
+                test_line = current_line + word + " "
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_line, font=ImageFont.truetype("fonts/ariston_normal.ttf", 40))[2:]
+                if width <= max_width:
+                    current_line = test_line
+                else:
+                    qatorlar.append(current_line)
+                    current_line = word + " "
+            qatorlar.append(current_line)
+
+
+            rasm = Image.open("Dizaynlar/20.png")
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 90 )
+            font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
+
+
+
+            # Birinchi matn
+            chiz.text((600, 60), text, fill="#EDF2F8", font=font)
+
+            # Qatorlarni chizish
+            ytext = 340
+            eni_rasm, boyi_rasm = rasm.size
+
+            for line in qatorlar:
+                line = line.strip()
+                text_width = chiz.textbbox((0, 0), line, font=font1)[2]
+                x_text = (eni_rasm - text_width) // 2
+                chiz.text((x_text, ytext), line, fill="#EDF2F8", font=font1)
+                ytext += 100
+
+            # Ikkinchi matn
+            tex = chiz.textbbox((0, 0), text2, font=font2)[2]
+            xtext = (eni_rasm - tex - 300) // 2
+            chiz.text((xtext, 800), text2, fill="#EDF2F8", font=font2)
+
+            # Uchinchi matn
+            chiz.text((300, 1000), text3, fill="#EDF2F8", font=font3)
+
+            rasm.save("yozuvli1.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+
         else :
             await update.message.reply_text('Iltimos  botdan foydalanishdan oldin qo`llanmani ko`rib chiqing!!! /yordam ni bosing.  ')
     except Exception as err:
