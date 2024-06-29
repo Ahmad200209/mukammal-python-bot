@@ -1123,7 +1123,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz = ImageDraw.Draw(rasm)
             font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
             font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 70 )
-            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100)
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 110)
             font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
 
 
@@ -1182,7 +1182,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz = ImageDraw.Draw(rasm)
             font = ImageFont.truetype("fonts/ariston_normal.ttf",  90 )
             font1 = ImageFont.truetype("fonts/ariston_normal.ttf", 80 )
-            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 90 )
+            font2 = ImageFont.truetype("fonts/ariston_normal.ttf", 100 )
             font3 = ImageFont.truetype("fonts/ariston_normal.ttf", 60 )
 
 
