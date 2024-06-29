@@ -1129,7 +1129,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
             # Birinchi matn
-            chiz.text((500, 360), text, fill="#EE2B448", font=font)
+            chiz.text((500, 360), text, fill="#E2B448", font=font)
 
             # Qatorlarni chizish
             ytext = 540
