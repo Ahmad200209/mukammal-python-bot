@@ -48,7 +48,7 @@ async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = await context.bot.get_chat_member(chat_id='@Qadr_dizayn' ,user_id=userid)
     userstatus = user.status 
     boshlash = [
-        [InlineKeyboardButton("Gorizontal taklifnomalar", callback_data='boshlash')]
+        [InlineKeyboardButton("Gorizontal taklifnomalar", callback_data='boshlash')],
         [InlineKeyboardButton("Vertikal taklifnomalar", callback_data='boshlash1')]
         ]
     bosh = InlineKeyboardMarkup(boshlash)
