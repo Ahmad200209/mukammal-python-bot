@@ -1236,7 +1236,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/21.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1300,7 +1300,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/22.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1364,7 +1364,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/23.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1428,7 +1428,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/24.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1492,7 +1492,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/25.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1560,7 +1560,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/26.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1623,7 +1623,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/27.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1686,7 +1686,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/28.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1749,7 +1749,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             kelin = ismlar[1]
             yoz = "Sizni nikoh to`yimizga taklif qilamiz."
             yoz1 = "va"
-            rasm = Image.open("Dizaynlar/30.jpg")
+            rasm = Image.open("Dizaynlar/29.jpg")
 
             words = yoz.split(' ')
             max_uzunlik = 500
@@ -1905,7 +1905,7 @@ async def Dizaynlar2(update: Update, context: ContextTypes.DEFAULT_TYPE):
     for i, photo_path1 in enumerate(photo_path2):
         # Inline keyboard yaratish (1 ta tugma har bir rasm uchun)
         keyboard = [
-            [InlineKeyboardButton(f" {i+1}-Dizayn", callback_data=f'saloml{i+1}')]
+            [InlineKeyboardButton(f" {i+1}-Dizayn", callback_data=f'turoq{i+1}')]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
 
@@ -1930,8 +1930,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await Dizaynlar1(update, context)
     elif query.data =='boshlash1':
         await Dizaynlar2(update, context)
-    elif callback_data.startswith('saloml'):
-        button_number = int(callback_data.lstrip('saloml'))
+    elif callback_data.startswith('turoq'):
+        button_number = int(callback_data.lstrip('turoq'))
         await query.answer()
         await context.bot.send_message(chat_id=query.message.chat_id,
                                       text=f"__________<Design-{button_number}>__________ \nHurmatlidan keyin chiqadigan ism<Davronbek>\nTo`y bo`ladigan sana<19 | 09 | 2024>\nKelin va kuyov ismi<Baxtiyor  Odina>\nManzil<Kosonsoy shahri>")
