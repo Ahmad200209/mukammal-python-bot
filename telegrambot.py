@@ -25,6 +25,18 @@ photo_paths = [
     'namunalar/19.jpg',
     'namunalar/20.jpg',
 ] 
+photo_path2 = [
+    'namunalar/yozuvli1.png',
+    'namunalar/yozuvli2.png',
+    'namunalar/yozuvli3.png',
+    'namunalar/yozuvli4.png',
+    'namunalar/yozuvli5.png',
+    'namunalar/yozuvli6.png',
+    'namunalar/yozuvli7.png',
+    'namunalar/yozuvli8.png',
+    'namunalar/yozuvli9.png',
+    'namunalar/yozuvli10.png',
+] 
 async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     userid = update.message.from_user.id
     chat_id = update.effective_message.chat_id
@@ -1211,7 +1223,645 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
             rasm.save("yozuvli1.png")
             await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-1"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
 
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3+50)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 270), text1 , fill="#E1B973", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-2"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 430
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik+300) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-50)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#08080A", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-3"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3+50)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 270), text1 , fill="#E1B973", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-4"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 430
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik+300) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#08080A", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-5"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#796544", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-6"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#796544", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-7"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#796544", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-8"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#796544", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-9"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  80 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 400
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 300), text1 , fill="#796544", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+        elif ozg == ("Design-10"):
+            text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
+            text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
+            text3 = re.search(r'<(.*?)>', salom.splitlines()[3]).group(1)
+            text4 = re.search(r'<(.*?)>', salom.splitlines()[4]).group(1)
+            ismlar = text3.split()
+            kuyov = ismlar[0]
+            kelin = ismlar[1]
+            yoz = "Sizni nikoh to`yimizga taklif qilamiz."
+            yoz1 = "va"
+            rasm = Image.open("Dizaynlar/30.jpg")
+
+            words = yoz.split(' ')
+            max_uzunlik = 500
+            qatorlar = []
+            oldingi = ""
+            for word in words:
+                test_qator = oldingi + word + " "   
+                width, _ = ImageDraw.Draw(Image.new('RGB', (0, 0))).textbbox((0, 0), test_qator, font= ImageFont.truetype( "fonts/salom.ttf",  50 ))[2:]
+                if width <= max_uzunlik:
+                    oldingi = test_qator
+                else:
+                    qatorlar.append(oldingi)
+                    oldingi = word + " "
+            qatorlar.append(oldingi)
+
+
+            chiz = ImageDraw.Draw(rasm)
+            font = ImageFont.truetype( "fonts/salom.ttf",  90 )
+            font1 = ImageFont.truetype("fonts/salom.ttf", 50 )
+            font2 = ImageFont.truetype("fonts/salom.ttf", 50)
+            font3 = ImageFont.truetype("fonts/salom.ttf", 100 )
+            font4 = ImageFont.truetype("fonts/salom.ttf", 50 )
+
+            ytext = 350
+            eni, boyi = rasm.size
+            for chiziq in qatorlar:
+                chiziq = chiziq.strip()
+                text_uzunlik = chiz.textbbox((0, 0), chiziq, font=font1)[2]
+                x_text = (eni - text_uzunlik + 200 ) // 2
+                chiz.text((x_text, ytext), chiziq, fill="#08080A", font=font1)
+                ytext +=50
+
+
+            uzun = chiz.textbbox((0,0), text1, font=font)[2]
+            uzun1 = chiz.textbbox((0,0), yoz1, font=font2)[2]
+            uzun2 = chiz.textbbox((0,0), kelin, font=font3)[2]
+            uzun3 = chiz.textbbox((0,0), text2, font=font3)[2]
+            uzun5= chiz.textbbox((0,0), text4, font=font2)[2]
+            xtext = (eni - uzun + 400)//2
+            xtext1 = (eni - uzun1)//2
+            xtext2 = (eni - uzun2-180)//2
+            xtext3 = (eni - uzun2+240)//2
+            xtext4 = (eni - uzun3-70)//2
+            xtext5 = (eni - uzun5+50)//2
+            chiz.text((xtext, 150), text1 , fill="#796544", font=font)
+            chiz.text((xtext1, 620), yoz1 , fill="#E1B973", font=font2)
+            chiz.text((xtext2, 530), kuyov, fill="#796544", font=font3)
+            chiz.text((xtext3, 660), kelin, fill="#796544", font=font3)
+            chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
+            chiz.text((xtext5, 1100), text4, fill="#08080A", font=font1)
+            rasm.save("yozuvli2.png")
+            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
         else :
             await update.message.reply_text('Iltimos  botdan foydalanishdan oldin qo`llanmani ko`rib chiqing!!! /yordam ni bosing.  ')
     except Exception as err:
@@ -1247,6 +1897,21 @@ async def Dizaynlar1(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                          photo=photo_file,
                                          caption=f' {i+1}-Dizayn',
                                          reply_markup=reply_markup)
+async def Dizaynlar2(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    chat_id = update.effective_message.chat_id
+    for i, photo_path1 in enumerate(photo_path2):
+        # Inline keyboard yaratish (1 ta tugma har bir rasm uchun)
+        keyboard = [
+            [InlineKeyboardButton(f" {i+1}-Dizayn", callback_data=f'saloml{i+1}')]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+
+        # Rasm yuborish
+        with open(photo_path1, 'rb') as photo_file:
+            await context.bot.send_photo(chat_id=chat_id,
+                                         photo=photo_file,
+                                         caption=f' {i+1}-Dizayn',
+                                         reply_markup=reply_markup)
 
 
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1257,10 +1922,16 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         button_number = int(callback_data.lstrip('salom'))
         await query.answer()
         await context.bot.send_message(chat_id=query.message.chat_id,
-                                      text=f"__________<Dizayn-{button_number}>__________ \nHurmatlidan keyin chiqadigan ism<Davronbek>\nTo`y bo`ladigan sana<19-dekabr>\nKelin va kuyov ismi<Baxtiyor va Odina>\nManzil<Kosonsoy shahri>")
+                                      text=f"__________<Dizayn-{button_number}>__________ \nHurmatlidan keyin chiqadigan ism<Davronbek>\nTo`y bo`ladigan sana<19-dekabr>\nKelin va kuyov ismi<Baxtiyor va  Odina>\nManzil<Kosonsoy shahri>")
     elif query.data =='boshlash':
         await Dizaynlar1(update, context)
-
+    elif query.data =='boshlash1':
+        await Dizaynlar2(update, context)
+    elif callback_data.startswith('saloml'):
+        button_number = int(callback_data.lstrip('saloml'))
+        await query.answer()
+        await context.bot.send_message(chat_id=query.message.chat_id,
+                                      text=f"__________<Design-{button_number}>__________ \nHurmatlidan keyin chiqadigan ism<Davronbek>\nTo`y bo`ladigan sana<19 | 09 | 2024>\nKelin va kuyov ismi<Baxtiyor  Odina>\nManzil<Kosonsoy shahri>")
 
 app = ApplicationBuilder().token("1952748542:AAH3EVIa0wGZg1tcuw3w_qs8aCFjH6r14gA").build()
 app.add_handler(CallbackQueryHandler(button))
