@@ -47,7 +47,10 @@ async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         f.write(" {}".format(res))
     user = await context.bot.get_chat_member(chat_id='@Qadr_dizayn' ,user_id=userid)
     userstatus = user.status 
-    boshlash = [[InlineKeyboardButton("Boshlash", callback_data='boshlash')]]
+    boshlash = [
+        [InlineKeyboardButton("Gorizontal taklifnomalar", callback_data='boshlash')]
+        [InlineKeyboardButton("Vertikal taklifnomalar", callback_data='boshlash1')]
+        ]
     bosh = InlineKeyboardMarkup(boshlash)
     if userstatus in ['member', 'administrator', 'creator']:
        await update.message.reply_text('Hurmatli foydalanuvchi botimizga hush kelibsiz', reply_markup=bosh)
