@@ -1289,7 +1289,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-2"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1353,7 +1353,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-3"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1417,7 +1417,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-4"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1481,7 +1481,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-5"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1549,7 +1549,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-6"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1612,7 +1612,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-7"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1675,7 +1675,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-8"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1738,7 +1738,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-9"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1801,7 +1801,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 950), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         elif ozg == ("Design-10"):
             text1 = re.search(r'<(.*?)>', salom.splitlines()[1]).group(1)
             text2 = re.search(r'<(.*?)>', salom.splitlines()[2]).group(1)
@@ -1864,7 +1864,7 @@ async def rasmga(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             chiz.text((xtext4, 800), text2, fill="#E1B973", font=font3)
             chiz.text((xtext5, 1100), text4, fill="#08080A", font=font1)
             rasm.save("yozuvli2.png")
-            await update.message.reply_photo(photo=open("yozuvli1.png", "rb"), parse_mode='HTML')
+            await update.message.reply_photo(photo=open("yozuvli2.png", "rb"), parse_mode='HTML')
         else :
             await update.message.reply_text('Iltimos  botdan foydalanishdan oldin qo`llanmani ko`rib chiqing!!! /yordam ni bosing.  ')
     except Exception as err:
