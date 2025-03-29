@@ -45,7 +45,7 @@ async def salom(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     res = str(chat_id)
     with open('obuna.txt', 'a') as f:
         f.write(" {}".format(res))
-    user = await context.bot.get_chat_member(chat_id='@Qadr_dizayn' ,user_id=userid)
+    user = await context.bot.get_chat_member(chat_id='@Kompyuter_savdo_Qadr' ,user_id=userid)
     userstatus = user.status 
     boshlash = [
         [InlineKeyboardButton("Gorizontal taklifnomalar", callback_data='boshlash')],
@@ -1936,7 +1936,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(chat_id=query.message.chat_id,
                                       text=f"__________<Design-{button_number}>__________ \nHurmatlidan keyin chiqadigan ism<Davronbek>\nTo`y bo`ladigan sana<19 | 09 | 2024>\nKelin va kuyov ismi<Baxtiyor  Odina>\nManzil<Kosonsoy shahri>")
 
-app = ApplicationBuilder().token("1952748542:AAH3EVIa0wGZg1tcuw3w_qs8aCFjH6r14gA").build()
+app = ApplicationBuilder().token("1952748542:AAFXU2eglpwEaMbig4GOZhZ2vtew6g9i9nA").build()
 app.add_handler(CallbackQueryHandler(button))
 app.add_handler(CommandHandler("start", salom))
 app.add_handler(CommandHandler("restart", salom))
